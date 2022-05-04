@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BotTestingConsoleApp",
+    "\\BotTestingConsoleApp\\obj"
   ],
+  "SelectedNode": "\\BotTestingConsoleApp\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

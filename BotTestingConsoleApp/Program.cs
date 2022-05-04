@@ -11,7 +11,7 @@ namespace BotTestingConsoleApp
         }
     }
 
-    public class ChatBotModel
+    public class IMSG
     {
 
         #region Properties
@@ -30,6 +30,7 @@ namespace BotTestingConsoleApp
         public string SelectedKeyword { get; set; }
 
         public string HelpMessage { get; set; }
+        public bool IsLoggedIn { get; set; }
 
 
 
@@ -38,9 +39,62 @@ namespace BotTestingConsoleApp
     }
     public static class ChatBot
     {
+        #region Properties
+         public string BotCustomerServiceEmail { get; set; }
+         public string UsersEmail { get; set; }
+         
+         public static readonly string AskUserEmail { get; set; }= "What is your Email?";
+         public static string EmailInput { get; set; }
+         public static readonly string AskUserPW { get; set; }= "What is your Password?";
+         public static string PasswordInput { get; set; }
+        
+        
+        
+	    #endregion
 
+        #region Help User Methods
+        public static IMSG HelpUser(IMSG m) 
+        {
+           if (m.IsLoggedIn==true)
+	        {
+	        //Call API  send users email and users message 
+            }
 
+           if(m.IsLoggedIn == false)
+            {
+                LogIn(m);
+            }
+        }
+    	#endregion
 
+        #region User Loggin
+        /// <summary>
+        /// Call this method until IsLoggedIn = true
+        /// </summary>
+         public static IMSG LogIn(IMSG m) 
+        {
+            if (m.IsLoggedIn==true)
+	        {
+                return m;
+	        }
+
+            if (m.IsLoggedIn == false)
+	        {
+                if (string.IsNullOrEmpty(EmailInput)==true)
+	            {
+		            m.Message =  AskUserEmail;
+                    return m;
+	            }
+                 if (string.IsNullOrEmpty(PasswordInput)==true)
+	            {
+		            m.Message =  AskUserPW;
+                    return m;
+	            }
+	        }   
+        } 
+           
+
+	    #endregion
 
         #region Bot Write To Screen Methods
 
@@ -52,9 +106,9 @@ namespace BotTestingConsoleApp
 
         /// </summary>
         /// <returns></returns>
-        public static ChatBotModel BW(string message, string backgroundImage, List<string> keywords)
+        public static IMSG BW(string message, string backgroundImage, List<string> keywords)
         {
-            var bot = new ChatBotModel() { BackgroundImage = backgroundImage, KeyWords = keywords, Message = message, HelpMessage = String.Empty };
+            var bot = new IMSG() { BackgroundImage = backgroundImage, KeyWords = keywords, Message = message, HelpMessage = String.Empty };
             foreach (var item in bot.KeyWords)
             {
 
@@ -67,13 +121,23 @@ namespace BotTestingConsoleApp
 
         #region Bot Read User Input
 
-        public static ChatBotModel BR(ChatBotModel bot)
+        public static ChatBotModel BR(IMSG bot)
         {
             if (!string.IsNullOrEmpty(bot.SelectedKeyword) && bot.KeyWords != null)
             {
+                if (!bot.KeyWords.Contains("Help")) 
+                { 
+                 bot.KeyWords.Add("Help");	
+                }
+
+
+	        }
                 foreach (var word in bot.KeyWords)
-                {
-                    if (word.Contains(bot.SelectedKeyword) == true)
+                { 
+                    var lowercapword = word.ToLower();
+                    var lowercapSelected = bot.SelectedKeyword.ToLower();
+                    
+                    if (lowercapword.Contains(lowercapSelected) == true)
                     {
                         bot.SelectedKeyword = word;
 
@@ -82,8 +146,15 @@ namespace BotTestingConsoleApp
 
                 }
 
-            }
+            
             bot.IsSimpleMode = true;
+          
+            foreach (var item in bot.KeyWords)
+	        {
+
+		      bot.HelpMessage = "Im sorry did you mean? "+   item +" ";
+
+	        }
             
             return bot;
         }
