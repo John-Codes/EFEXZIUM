@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "j8ARTkR0KuLi2DatvB6cdzPG4IgWtfbGS0EErIRY8fWaigadqPR4kJ73HE5YfTcdlEyXiGm4VHwnrVjktkdEmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\User\\source\\repos\\EFEXZIUM\\ChatBotMobile\\ChatBotMobile.iOS\\ChatBotMobile.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
