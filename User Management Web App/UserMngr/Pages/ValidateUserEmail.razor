@@ -1,0 +1,73 @@
+﻿
+@page "/validate" 
+@page "/validateUser/{ID}"
+@using Newtonsoft.Json
+@using UserMngr.Services.API
+@inject HttpClient Http
+
+@inject IUserManager UserMNGR
+
+
+<PageTitle>Saludos</PageTitle>
+
+
+@if(name==string.Empty || ID== string.Empty)
+{
+    <h1>Error de Conexion</h1>
+
+    <h1>@DebugData</h1>
+<p>Lo sentimos por favor trate mas tarde o llame</p>
+}
+@if(name != string.Empty && name != null)
+{
+
+<h1>Bienvenidos</h1>
+
+
+<p>Hola @name, Su cuenta ah sido registrada! </p>
+
+}
+    
+
+@code {
+    [Parameter]
+    public string ID { get; set; }
+    public string name { get; set; }
+    public string DebugData { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        ID = ID ?? string.Empty;
+        name = name ?? string.Empty; 
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        //  await Task.Delay(5000);
+        try
+        {
+            //  var result = await Http.GetFromJsonAsync<HttpResponseMessage>("/api/Usuario/API/Validate/User/"+ID);
+            var result =  await UserMNGR.ValidateUserEmail(ID);
+            if (result!=null)
+            {
+                name = result;
+                //name = name is null ? JsonConvert.DeserializeObject<string>(result.Content.): string.Empty;
+            }           
+            
+        }
+        catch(Exception e) {
+
+            if(e != null)
+            {
+
+             DebugData =  e.Message;
+
+
+
+            }
+        }
+    }
+
+
+
+
+}
