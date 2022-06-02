@@ -1,11 +1,14 @@
 ﻿using System.Collections.Generic;
 
-namespace BotTestingConsoleApp
+namespace BotLib
 {
     public class IMSG
     {
-
-        
+        public bool Liked { get; set; }
+        public bool Loved { get; set; }
+        public bool Hate { get; set; }
+        public string Css { get; set; }
+        public string CurrentMode { get; set; }
 
         public string KeyWord { get; set; }
 

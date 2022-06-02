@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BotTestingConsoleApp
+namespace BotLib
 {
     public static partial class ChatBot
     {
@@ -65,7 +65,7 @@ namespace BotTestingConsoleApp
         /// <returns></returns>
         /// 
         
-        public static IMSG BW(string message, string backgroundImage, List<string> keywords)
+        public static IMSG BW(string message,string ProgramMode, string backgroundImage, List<string> keywords)
         {
             if (CurrentKeyWords!= null)
             {

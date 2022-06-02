@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BotTestingConsoleApp
+namespace BotLib
 {
     public static partial class ChatBot
     {

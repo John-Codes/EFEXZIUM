@@ -4,16 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>a7d7b934-8d97-445a-adb5-3e33c2c918d4</UserSecretsId>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Pages\index.razor.CSS" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Pages\index.razor.css" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.5" />

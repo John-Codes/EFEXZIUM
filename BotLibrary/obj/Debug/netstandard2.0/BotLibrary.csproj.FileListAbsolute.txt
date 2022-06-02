@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\bin\Debug\netstandard2.0\BotLibrary.deps.json
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\bin\Debug\netstandard2.0\BotLibrary.dll
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\bin\Debug\netstandard2.0\BotLibrary.pdb
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\obj\Debug\netstandard2.0\BotLibrary.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\obj\Debug\netstandard2.0\BotLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\obj\Debug\netstandard2.0\BotLibrary.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\obj\Debug\netstandard2.0\BotLibrary.AssemblyInfo.cs
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\obj\Debug\netstandard2.0\BotLibrary.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\obj\Debug\netstandard2.0\BotLibrary.dll
+C:\Users\User\source\repos\EFEXZIUMALL\BotLibrary\obj\Debug\netstandard2.0\BotLibrary.pdb

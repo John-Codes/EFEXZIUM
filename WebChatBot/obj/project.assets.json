@@ -390,6 +390,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "BotLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BotLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BotLibrary.dll": {}
+        }
       }
     },
     "net6.0/browser-wasm": {
@@ -774,6 +784,16 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "BotLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BotLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BotLibrary.dll": {}
         }
       }
     }
@@ -1537,10 +1557,16 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "BotLibrary/1.0.0": {
+      "type": "project",
+      "path": "../BotLibrary/BotLibrary.csproj",
+      "msbuildProject": "../BotLibrary/BotLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BotLibrary >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.5",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.5"
     ]
@@ -1581,7 +1607,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User\\source\\repos\\EFEXZIUMALL\\BotLibrary\\BotLibrary.csproj": {
+              "projectPath": "C:\\Users\\User\\source\\repos\\EFEXZIUMALL\\BotLibrary\\BotLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
