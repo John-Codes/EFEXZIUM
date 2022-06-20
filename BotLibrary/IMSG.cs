@@ -4,13 +4,14 @@ namespace BotLib
 {
     public class IMSG
     {
+        public  string Image { get; set; }
         public bool Liked { get; set; }
         public bool Loved { get; set; }
         public bool Hate { get; set; }
         public string Css { get; set; }
-        public string CurrentMode { get; set; }
+       
 
-        public string KeyWord { get; set; }
+       
 
         public List<string> KeyWords { get; set; }
 
@@ -21,6 +22,7 @@ namespace BotLib
 
         public string BotProgramTitle { get; set; }
         public bool IsSimpleMode { get; set; } = false;
+        
         public string SelectedKeyword { get; set; }
 
         public string HelpMessage { get; set; }

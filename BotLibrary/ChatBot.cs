@@ -67,19 +67,15 @@ namespace BotLib
         
         public static IMSG BW(string message,string ProgramMode, string backgroundImage, List<string> keywords)
         {
+            NewMessage = true;
             if (CurrentKeyWords!= null)
             {
                 CurrentKeyWords.Clear();
                 CurrentKeyWords.AddRange(keywords);
             }
-            var bot = new IMSG() { BackgroundImage = backgroundImage, KeyWords = keywords, Message = message, HelpMessage = String.Empty };
-            foreach (var item in bot.KeyWords)
-            {
-
-                bot.HelpMessage = "Please say one of this words: " + item + " ";
-
-            }
-            return bot;
+            var msg = new IMSG() { BackgroundImage = backgroundImage, KeyWords = keywords, Message = message, HelpMessage = String.Empty , BotProgramTitle= ProgramMode, Css= string.Empty, Image=string.Empty, SelectedKeyword=string.Empty};
+            
+            return msg;
         }
         
 

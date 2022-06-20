@@ -5,7 +5,8 @@ namespace BotLib
     public static partial class ChatBot
     {
 
-        public static List<string> CurrentKeyWords { get; set; }
+        public static bool NewMessage { get; set; }
+        public static List<string> CurrentKeyWords { get; set; }= new List<string>(){ };
         public static string BotCustomerServiceEmail { get; set; }
         public static string UsersEmail { get; set; }
 
@@ -14,6 +15,7 @@ namespace BotLib
         public static string AskUserPW { get; set; } = "What is your Password?";
         public static string PasswordInput { get; set; }
 
+       
 
 
 
